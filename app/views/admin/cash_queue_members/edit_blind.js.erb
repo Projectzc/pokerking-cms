@@ -1,0 +1,9 @@
+$('#edit_blind').parents(".ui-dialog").remove();
+
+var html = "<%= j(render('edit_blind', remote: true)) %>";
+$(html).dialog({
+    modal: true,
+    width: '600px',
+    title: 'Edit Current Blind'
+});
+$('#cash_queue_small_blind').focus()

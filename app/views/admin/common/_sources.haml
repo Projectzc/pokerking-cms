@@ -1,0 +1,12 @@
+%div.sources
+  %div.infos.hidden
+    %form{class: 'search_infos_form left', action: admin_infos_path(format: :json, per_page: 10), data: { remote: true }}
+      %input{name: 'q[title_contains]', type: 'search', id: 'input_search_infos'}
+      %input{name: 'q[published_eq]', type: 'hidden', value: 'true'}
+      %input{name: 'submit', type: 'submit', value: '搜索', id: 'btn_search_infos'}
+    %table
+      %thead
+        %tr
+          %th Info ID
+          %th Info Name
+      %tbody

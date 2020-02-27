@@ -1,0 +1,28 @@
+= semantic_form_for [:admin, resource] do |f|
+  = f.semantic_errors *f.object.errors.keys
+  = f.inputs do
+    = f.input :name
+    = f.input :image, as: :attachment, required: true,
+                     hint: I18n.t('notices.max_image_size') + ' 2MB',
+                     image: proc { |o| o.image_url.to_s }
+    = f.input :image_en, as: :attachment, required: true,
+                     hint: I18n.t('notices.max_image_size') + ' 2MB',
+                     image: proc { |o| o.image_en_url.to_s }
+    = f.input :image_complex, as: :attachment, required: true,
+                   hint: I18n.t('notices.max_image_size') + ' 2MB',
+                   image: proc { |o| o.image_complex_url.to_s }
+    = f.input :table_type, collection: AdminTrans::TABLE_TYPE, prompt: true
+    = f.input :amap_poiid, hint: content_tag('a', '获取地点详情', class: 'get_amap_detail', style: 'cursor:pointer')
+    = f.input :amap_location
+    = f.input :notice, hint: I18n.t('notices.length_max_size') + ' 64 bytes'
+
+  = f.submit data: { disable_with: 'Waiting...' }
+
+:javascript
+  $(function() {
+    $('.get_amap_detail').click(function(){
+      let poiid = $('#cash_game_amap_poiid').val()
+      $.ajax({ url: '/zh-CN/admin/cash_games/amap_detail?poiid=' + poiid })
+      console.log(poiid)
+    })
+  });

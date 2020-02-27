@@ -1,0 +1,10 @@
+%div#edit_info
+  = form_tag edit_info_admin_cash_queue_cash_queue_member_path(resource.cash_queue, resource) do
+    %div{style: 'margin-bottom: 15px; color: gray'} Current Blind：#{resource.cash_queue.small_blind} / #{resource.cash_queue.big_blind}
+    %div{style: 'margin-bottom: 15px; color: gray'} Current Name: #{resource.nickname}
+    = label_tag 'Name：'
+    = text_field_tag 'nickname', resource.nickname
+    %div{style: 'margin-top: 10px; margin-bottom: 10px'}
+      = label_tag 'Remark：'
+      = text_field_tag 'memo', resource.memo
+    = submit_tag 'Submit'

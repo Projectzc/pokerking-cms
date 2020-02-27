@@ -1,0 +1,9 @@
+$('#add_form').parents(".ui-dialog").remove();
+
+var html = "<%= j(render('add_form', remote: true)) %>";
+$(html).dialog({
+    modal: true,
+    width: '500px',
+    title: 'Add User'
+});
+$('#nickname').focus();

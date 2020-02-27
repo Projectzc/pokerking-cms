@@ -1,0 +1,156 @@
+"zh-CN":
+  sidebars:
+    add: '添加'
+    edit_current_blind: '修改当前盲注'
+  notices:
+    username_blank: '用户昵称不能为空，请重新输入.'
+    username_exists: '用户昵称已存在，请重新输入. 存在的盲注结构有'
+    write_access: '用户写入成功'
+    username_exist: '用户昵称已存在，请重新输入'
+    max_image_size: '图片最大为'
+    length_max_size: '长度限制'
+    click_me: '点我添加'
+    show_queue: '查看排队情况'
+    confirm: '审核通过'
+  buttons:
+    delete: '删除'
+    update: '修改'
+  activerecord:
+    menu:
+      admin: '管理员'
+      info:  '资讯'
+    models:
+      admin_role: '后台角色'
+      admin_user: "管理员"
+      comment: "管理员备注"
+      main_event: "赛事"
+      event_schedule: "赛程"
+      cash_game: '现金桌'
+      cash_queue: '排队进程'
+      cash_queue_member: '排队人员'
+      info: "资讯"
+      homepage_banner: "首页banner"
+      user: '用户管理'
+      platform_question: '常见问题'
+      dashboard: '控制面板'
+      info_tag: '资讯标签'
+      app_version: "app版本管理"
+      feedback: '意见反馈'
+    attributes:
+      admin_user:
+        email: "邮箱"
+        sign_in_count: "登陆次数"
+        current_sign_in_at: "当前登录"
+        last_sign_in_at: "上次登录时间"
+        last_sign_in_ip: "上次登录地点"
+        created_at: "注册时间"
+        password: "密码"
+        password_confirmation: "确认密码"
+        admin_roles: '后台角色'
+      main_event:
+        name: "主赛名称"
+        logo: "主赛logo"
+        begin_time: "开始时间"
+        end_time: "结束时间"
+        event_state: "赛事状态"
+        published: "是否发布"
+        description: "详情描述"
+        live_url: '直播地址'
+        location: '举办地点'
+      event_schedule:
+        name: "名称"
+        event_type: "类型"
+        event_num: "编号"
+        buy_in: "买入"
+        starting_stack: "起始筹码"
+        entries: "参数人数"
+        schedule_pdf: "赛程pdf"
+        begin_time: "开始时间"
+        reg_open: "开始登记"
+        reg_close: "结束登记"
+      info:
+        main_event: "所属赛事"
+        only_show_in_event: "是否只显示在赛事中"
+        title: "标题"
+        image: "图片"
+        source: "来源"
+        description: "描述"
+        published: "是否发布"
+        created_at: "创建时间"
+        updated_at: "更新时间"
+        hot: '是否热门'
+        info_tags: '标签'
+        location: '举办地点'
+      info_tag:
+        name: '标签名'
+        name_en: '标签英文名'
+      feedback:
+        nickname: '昵称'
+        content: '反馈内容'
+        email: '邮箱'
+        dealt: '已处理'
+        created_at: '创建时间'
+      cash_game:
+        name: '名称'
+        image: '中文图片'
+        image_en: '英文图片'
+        image_complex: '繁体图片'
+        table_type: '桌子类型'
+      cash_queue:
+        cash_game: '现金桌'
+        small_blind: '小盲注'
+        big_blind: '大盲注'
+        straddle: '大盲前注'
+        table_nums: '桌数'
+        cash_queue_members_count: '排队的人数'
+        table_no: '桌子编号'
+        buy_in: '买入'
+        high_limit: 'high limit'
+        transfer: 'transfer request'
+        currency: '货币类型'
+        table_people: '桌面人数'
+        navigation: '盲注图片'
+        created_at: '创建时间'
+        updated_at: '更新时间'
+      cash_queue_member:
+        id: '位置'
+        qid: '排队队列'
+        nickname: '昵称'
+        memo: '备注'
+        canceled: '是否取消'
+        created_at: '创建时间'
+        updated_at: '更新时间'
+      homepage_banner:
+        source_title: '来源标题'
+        source_type: '来源类型'
+        image: '图片'
+      user:
+        nickname: '昵称'
+        email: '电子邮箱'
+        mobile: '手机号码'
+        reg_date: '注册日期'
+        last_visit: '上次访问时间'
+        login_count: '登录次数'
+        login_days: '登录天数'
+        created_at: '创建时间'
+        last_sign_in_ip: '登录IP'
+        avatar: '头像'
+        preview: '预览'
+      app_version:
+        version: "版本号"
+        platform: "app平台"
+        force_upgrade: "强制升级"
+        content: "更新内容"
+        title: "更新标题"
+        download_url: "下载链接"
+      platform_question:
+        description: '问题列表'
+      admin_role:
+        name: '角色名称'
+        memo: '备注'
+    format: "%{attribute}%{message}"
+    messages:
+      blank: '不能为空'
+
+
+

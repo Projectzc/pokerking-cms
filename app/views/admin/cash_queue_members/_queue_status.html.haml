@@ -1,0 +1,13 @@
+%div#queue_status
+  %div
+    %span Name：
+    %span.red= @infos[:nickname]
+  %div
+    %span No：
+    %span.red= "No.#{@infos[:index] + 1}"
+  %div
+    %span Total：
+    %span.blue= @infos[:total]
+  %div
+    %span Waiting Number：
+    %span.blue= @infos[:index]
